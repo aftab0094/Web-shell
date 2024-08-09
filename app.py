@@ -6,7 +6,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 db = SQLAlchemy(app)
 
 class shell(db.Model):
-    test_col1 = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
+    shell_output = db.Column(db.String)
+    shell_input = db.Column(db.String)
 
     def __repr__(self):
         return 'test'
