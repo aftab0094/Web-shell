@@ -15,8 +15,8 @@
             </tr>
             {% for command in commands %}
             <tr>
-                <td>{{ command.content }}</td>
-                <td>{{ command_output }}</td>
+                <td>{{ command.shell_input }}</td>
+                <td>{{ command.shell_output }}</td>
             </tr>
             {% endfor %}
         </table>
