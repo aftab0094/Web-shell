@@ -8,18 +8,20 @@
 <div class="content">
     <h1 style="text-align: center;">WEB SHELL</h1>
     <div class="shell_show">
-        <table>
-            <tr>
-                <th>Input</th>
-                <th>Output</th>
-            </tr>
-            {% for command in commands %}
-            <tr>
-                <td>{{ command.shell_input }}</td>
-                <td>{{ command.shell_output }}</td>
-            </tr>
-            {% endfor %}
-        </table>
+        <div class="table_container">
+            <table>
+                <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                </tr>
+                {% for command in commands %}
+                <tr>
+                    <td>{{ command.shell_input }}</td>
+                    <td>{{ command.shell_output }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
         <form action="/" method="post">
             <input type="text" id="shell_show" name="shell_show">
             <input type="submit" value="Send command">
