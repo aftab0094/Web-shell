@@ -11,7 +11,7 @@ class shell(db.Model):
     shell_input = db.Column(db.String)
 
     def __repr__(self):
-        return 'test'
+        return f'<Command {self.id}>'
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
